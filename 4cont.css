@@ -1,0 +1,374 @@
+﻿.btn {
+    display: inline-flex;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 0.05em solid #666;
+    font-size: 1rem;
+    align-items: stretch;
+    padding: auto;
+}
+
+
+/*BANNER*/
+
+.banner {
+    display: grid;
+    grid-template-columns: 300px 900px 250px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    background-color: ghostwhite;
+}
+
+.logo {
+    width: 500px;
+}
+
+.logo ul li {
+    list-style: none;
+}
+
+.logo img {
+    display: grid;
+    display: flex;
+    width: 50%;
+}
+
+.area {
+    align-items: center;
+}
+
+.area h3 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.area p {
+    text-align: center;
+    font-size: 16px;
+}
+
+.area ul li {
+    list-style: none;
+}
+
+.contact ul li {
+    list-style: none;
+}
+
+
+/*END BANNER*/
+
+
+/*SUB-BANNER*/
+
+.sub-banner {
+    display: grid;
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    text-decoration: none;
+    background-color: black;
+}
+
+.sub-banner a:hover {
+    background: lightseagreen;
+}
+
+.sub-banner a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.ho ul li {
+    list-style: none;
+}
+
+.wh ul li {
+    list-style: none;
+}
+
+.wh ul li {
+    list-style: none;
+}
+
+.re ul li {
+    list-style: none;
+}
+
+.com ul li {
+    list-style: none;
+}
+
+.con ul li {
+    list-style: none;
+}
+
+
+/*CONTACT FORM START*/
+
+
+/*CONTACT FORM intro START*/
+
+.intro {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.intro1 {
+    display: grid;
+    background-color: darkgrey;
+    padding: 5px;
+}
+
+.intro1 {
+    text-align: center;
+}
+
+.intro2 {
+    display: grid;
+    background-color: coral;
+}
+
+.intro2 p {
+    display: grid;
+    background-color: coral;
+    font-size: 20px;
+    text-align: center
+}
+
+
+/*CONTACT FORM intro END*/
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px;
+    grid-gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    display: grid;
+    width: 700px;
+}
+
+.generic-contact-form {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: black;
+    background-color: gainsboro;
+    height: 700px;
+}
+
+.title {
+    margin-top: -2rem;
+    margin-bottom: -5rem;
+}
+
+.personalinfo {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.addressinfo {
+    width: 400px;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+}
+
+.inquiry.question {
+    width: 500px;
+}
+
+h3 {
+    font-family: arial, helvetica, 'sans-serif';
+    font-weight: 100;
+    font-size: 2rem;
+    font-size: 32px;
+    margin: 20px 10px;
+    padding: 0;
+    flex: 100%;
+}
+
+label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+input,
+select,
+textarea {
+    flex: 1 0;
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+    background-color: #f0f0f0;
+}
+
+.button {
+    flex: 0 1 200px;
+}
+
+.button:hover {
+    background: red;
+}
+
+.drop-down {
+    flex: 1 1 25%;
+}
+
+.comments {
+    flex: 1 1 100%;
+}
+
+
+/*PAYMENT START*/
+
+.payment-form {
+    margin: 50px auto;
+    width: 600px;
+}
+
+
+/* CSS for Credit Card Payment form */
+
+.credit-card-box .panel-title {
+    display: inline;
+    font-weight: bold;
+}
+
+.credit-card-box .form-control.error {
+    border-color: red;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.credit-card-box label.error {
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+}
+
+.credit-card-box .payment-errors {
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+}
+
+.credit-card-box label {
+    display: block;
+}
+
+
+/* The old "center div vertically" hack */
+
+.credit-card-box .display-table {
+    display: table;
+}
+
+.credit-card-box .display-tr {
+    display: table-row;
+}
+
+.credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+
+/* Just looks nicer */
+
+.credit-card-box .panel-heading img {
+    min-width: 180px;
+}
+
+
+/*END PAYMENT*/
+
+
+/*CONTENT association START*/
+
+.association {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.association img {
+    display: grid;
+    width: 60%;
+}
+
+
+/*CONTENT association END*/
+
+
+/*FOOTER START*/
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer ul li {
+    display: grid;
+    display: flex;
+    list-style: none;
+}
+
+
+/*END CONTENT */
+
+
+/* photo refe https://pixabay.com/photos/mouse-rodent-cute-mammal-nager-1708378/*/
+
+
+/* cockraches photo ref https://pixabay.com/vectors/bug-cockroach-insect-roach-1295181/*/
+
+
+/* bedbug photo ref https://pixabay.com/vectors/animal-bedbug-bed-bug-infestation-2027062/*/
+
+
+/* mice photo https://pixabay.com/vectors/mouse-mice-animal-rodent-small-303588/*/
