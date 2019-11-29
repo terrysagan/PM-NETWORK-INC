@@ -1,0 +1,1057 @@
+﻿/* CSS Document */
+
+
+/*kichen: https://pixabay.com/photos/kitchen-home-real-estate-2486092/*/
+
+
+/* homes skaches :https://pixabay.com/illustrations/houses-set-architecture-clip-art-1094900/*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main {
+    min-height: 100%;
+}
+
+.btn {
+    display: inline-flex;
+    background-color: #666;
+    color: white;
+    background-image: linear-gradient(bottom, darkgrey, to lightblue);
+    border-radius: 6px;
+    text-decoration: none;
+    border: 0.10em solid #666;
+    font-size: 1rem;
+    align-items: stretch;
+    padding: auto;
+}
+
+.btn1 {
+    display: inline-flex;
+    background-color: mintcream;
+    color: black;
+    background-image: linear-gradient(bottom, darkgrey, to lightblue);
+    border-radius: 6px;
+    text-decoration: none;
+    border: 0.10em solid #666;
+    font-size: 1rem;
+    align-items: stretch;
+    padding: auto;
+}
+
+
+/*HEADER START*/
+
+header {
+    margin: auto;
+    place-items: center;
+}
+
+
+/* BANNER START*/
+
+.banner {
+    display: inline-flex;
+    width: 100%;
+    position: fixed;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+    margin-left: 0%;
+    margin-right: 2%;
+    padding-top: 5px;
+    background: #0f92b3;
+    height: 8%;
+}
+
+.banner ul {
+    line-height: 32px;
+    color: #ffffff;
+    text-align: justify;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 0%;
+    padding: 0;
+    align-items: center;
+    word-wrap: break-word !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.banner h3 {
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .banner,
+    .banner ul {
+        display: none;
+    }
+}
+
+
+/* BANNER END*/
+
+.name {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    margin: 10px 0 5px 0;
+    color: red;
+    font-family: Calibri;
+    word-spacing: 10px;
+}
+
+.name a {
+    height: 40px;
+    align-items: center;
+}
+
+
+/* NAV START*/
+
+
+}
+.menu {
+    margin-left: 20px;
+}
+.menu li a {
+    font-size: 20px;
+    color: black;
+}
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+    display: flex;
+    width: 100%;
+    background-color: whitesmoke;
+    position: fixed;
+    margin-top: 50px;
+    align-items: center;
+    place-content: center;
+    justify-content: center;
+    opacity: 6000;
+}
+@media screen and (max-width:999px) {
+    nav {
+        margin-top: -10px;
+    }
+}
+#logo {
+    display: block;
+    padding: 0 70px 0 10px;
+    float: left;
+    font-size: ;
+    line-height: 60px;
+    /*mentioned font 20px+line height  60px reduced height of logo+nav*/
+}
+#logo img {
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+    background-color: ;
+}
+
+/* Styling the links */
+nav a {
+    display: block;
+    padding: 14px 20px;
+    color: #FFF;
+    font-size: 17px;
+    text-decoration: none;
+}
+nav ul li ul li:hover {
+    background: #000000;
+}
+
+/* Background color change on Hover */
+nav a:hover {
+    background-color: lightgray;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    /* has to be the same number as the "line-height" of "nav a" */
+    
+    top: 60px;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    
+    left: 170px;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li>a:after {
+    content: ' +';
+}
+li>a:only-child:after {
+    content: '';
+}
+
+/* Media Queries
+--------------------------------------------- */
+@media all and (max-width: 600px) {
+    #logo {
+        display: none;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+    
+    nav {
+        margin: 0 auto;
+    }
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    
+    .banner,
+    .toggle+a,
+    .menu {
+        display: none;
+    }
+    /* Stylinf the toggle lable */
+    
+    .toggle {
+        display: block;
+        background-color: #254441;
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+        text-decoration: none;
+        border: none;
+    }
+    
+    .toggle:hover {
+        background-color: #000000;
+    }
+    /* Display Dropdown when clicked on Parent Lable */
+    
+    [id^=drop]:checked+ul {
+        display: block;
+    }
+    /* Change menu item's width to 100% */
+    
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+    
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+    
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: #000000;
+    }
+    
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a {
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+    }
+    
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        background-color: #212121;
+    }
+    /* Hide Dropdowns by Default */
+    
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+        /* has to be the same number as the "line-height" of "nav a" */
+    }
+    /* Hide menus on hover */
+    
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+        display: none;
+    }
+    /* Fisrt Tier Dropdown */
+    
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+    
+    nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+    }
+}
+@media all and (max-width: 330px) {
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+}
+
+/* NAV START*/
+.page-wrapper {
+    min-height: 100%;
+}
+
+/*HEADER END*/
+
+/* SHOWCASE START*/
+.slides {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.slider {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 2em auto;
+}
+.slider-wraper image {
+    display: flex;
+    max-width: 100%;
+}
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.slide {
+    float: left;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 3s linear;
+}
+.slider-wrapper>.slide:first-child {
+    opacity: 1;
+}
+@media screen and (max-width: 1000px) {
+    .slides {
+        overflow: auto;
+        display: none;
+    }
+}
+
+/*SHOWCASE END */
+
+/* CAPTION START*/
+.caption {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    place-items: center;
+    justify-content: center;
+    color: darkgreen;
+}
+.caption ul {
+    width: 80%;
+}
+.sub-caption {
+    background-color: peru;
+    border: 0.50px solid orange;
+}
+.caption h2 .highlight {
+    background-image: linear-gradient(to right, white, #fccb8f, lightgray);
+    border-radius: 6px;
+    padding: 3px;
+    color: darkgreen;
+    font-size: 20px;
+    text-shadow: 0 2px 0 gray;
+}
+.caption h1 h2 {
+    text-align: center;
+}
+.question ul {
+    justify-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+.question ul h3 {
+    text-justify: left;
+    text-align: left;
+}
+.question ul p {
+    text-justify: left;
+    text-align: left;
+}
+.question ul li {
+    text-justify: left;
+    text-align: left;
+    margin-left: 50px;
+}
+.question ul li {
+    text-justify: left;
+    text-align: left;
+}
+
+/* CAPTION END*/
+
+/* SELECTION OF PEST START */
+
+/*.selection {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "selection1"" selection2";
+}
+.selection {
+    grid-area: selection;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 300px;
+}
+.selection-one {
+    font-size: 1rem;
+    margin-top: 2rem;
+    fill-opacity: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: khaki;
+    justify-items: center;
+    justify-content: center;
+}
+.selection-two {
+    font-size: 1rem;
+    margin-top: 2rem;
+    fill-opacity: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: khaki;
+    justify-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.selection-two h3 {
+    line-height: 1.75em;
+    font-family: sans-serif;
+}
+@media screen and (max-width: 700px) {
+    .selection {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 0px;
+        width: 100%;
+    }
+}*/
+.selection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    place-items: center;
+    justify-content: center;
+    text-align: center;
+    color: darkgreen;
+}
+.selection-one {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    place-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.selection-two {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    place-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.selection1 ul {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+.selection ul {
+    justify-content: center;
+    width: 80%;
+}
+
+/* SELECTION OF PEST END */
+
+/* OFFER START */
+.offer {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    background: cornsilk;
+    font-size: 20px;
+    justify-content: center;
+    justify-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.offer ul {
+    width: 50%;
+}
+
+/* OFFER START */
+
+/*3 POINTS START  */
+.points {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    background: cornsilk;
+    font-size: 20px;
+    justify-content: center;
+    justify-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.points ul {
+    width: 90%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "content1 content2 content3"
+}
+.content {
+    grid-area: content;
+    background-position: center;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.content1,
+.content2,
+.content3 {
+    margin-right: 10px;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    fill-opacity: auto;
+    width: 400px;
+    height: auto;
+    text-align: justify;
+    padding-right: 35px;
+}
+.content1 p {
+    font-size: 18px;
+    text-indent: justify;
+}
+.content1 h3 {
+    text-align: center;
+}
+.content1a {
+    display: grid;
+}
+.content2 {
+    margin-right: 10px;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    fill-opacity: auto;
+    width: 400px;
+    height: auto;
+    text-align: justify;
+    padding-right: 40px;
+}
+.content2 p {
+    font-size: 18px;
+    text-indent: justify;
+}
+.content2b {
+    display: grid;
+}
+.content3 {
+    margin-right: 10px;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    fill-opacity: auto;
+    width: 400px;
+    height: auto;
+    text-align: justify;
+}
+.content3 p {
+    font-size: 18px;
+    text-indent: justify;
+}
+.content3c {
+    display: grid;
+}
+
+/* 3 POINTS END*/
+
+/*SERVICES OFFER START*/
+.a-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "content1 content2 content3"
+}
+.a-content {
+    grid-area: content;
+    background-position: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.a-content1 {
+    margin-right: 10px;
+    background-color: lightgray;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    fill-opacity: auto;
+    width: 600px;
+    padding: 5px;
+}
+.a-content1 p {
+    font-size: 22px;
+    text-indent: justify;
+}
+.a-content1a {
+    display: grid;
+    background-color: ;
+}
+.a-content1a h2 {
+    text-align: center
+}
+.a-content2 {
+    margin-right: 10px;
+    background-color: lightgray;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    fill-opacity: auto;
+    width: 600px;
+    padding: 5px;
+}
+.a-content2 p {
+    font-size: 22px;
+    text-indent: justify;
+}
+.a-content2a {
+    display: grid;
+    background-color: ;
+}
+.a-content2a h2 {
+    text-align: center
+}
+.b-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "content1 content2 content3"
+}
+.b-content {
+    grid-area: content;
+    background-position: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.b-content1 {
+    margin-right: 10px;
+    background-color: lightgray;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    fill-opacity: auto;
+    width: 600px;
+    padding: 5px;
+}
+.b-content1 p {
+    font-size: 22px;
+    text-indent: justify;
+}
+.b-content1a {
+    display: grid;
+    background-color: ;
+}
+.b-content1a h2 {
+    text-align: center
+}
+.b-content2 {
+    margin-right: 10px;
+    background-color: lightgray;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    fill-opacity: auto;
+    width: 600px;
+    padding: 5px;
+}
+.b-content2 p {
+    font-size: 22px;
+    text-indent: justify;
+}
+.b-content2a {
+    display: grid;
+    background-color: ;
+}
+.b-content2a h2 {
+    text-align: center
+}
+.c-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "content1 content2 content3"
+}
+.c-content {
+    grid-area: content;
+    background-position: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.c-content1 {
+    margin-right: 10px;
+    background-color: lightgray;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    fill-opacity: auto;
+    width: 600px;
+    padding: 5px;
+}
+.c-content1 p {
+    font-size: 22px;
+    text-indent: justify;
+}
+.c-content1a {
+    display: grid;
+    background-color: ;
+}
+.c-content1a h2 {
+    text-align: center
+}
+.c-content2 {
+    margin-right: 10px;
+    background-color: lightgray;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    fill-opacity: auto;
+    width: 600px;
+    padding: 5px;
+}
+.c-content2 p {
+    font-size: 22px;
+    text-indent: justify;
+}
+.c-content2a {
+    display: grid;
+    background-color: ;
+}
+.c-content2a h2 {
+    text-align: center
+}
+
+/*SERVICES OFFER END*/
+
+/* OVERLAY START*/
+.overlay {
+    display: grid;
+    grid-column: 1/2;
+    width: 100%;
+    max-width: 1200px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    justify-items: center;
+    mask-position: fixed;
+    opacit: (0.30)
+}
+.overlay p {
+    font-size: 1.50rem;
+    text-indent: justify;
+    overflow: none;
+    object-fit: contain;
+    color: red;
+    text-align: center;
+}
+
+/* OVERLAY END*/
+
+/*MEMBERSHIP START*/
+.affiliation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: ;
+    border: 0.50px solid orange;
+}
+.nest {
+    width: 100%;
+    max-width: 300px;
+}
+.nest ul {
+    width: 100%;
+    max-width: 200px;
+}
+
+/*MEMBERSHIP END */
+
+/*FOOTER START*/
+.footer {
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: #3d3d3d;
+}
+.footer .sub-footer .column {
+    margin-left: 0px;
+}
+.footer .column {
+    width: 220px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px 20px 20px 20px;
+}
+.footer .column h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.250em;
+}
+.footer .column ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.footer .column ul li {
+    color: #999999;
+    font-size: .80em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+}
+.social ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+}
+.footer .column ul li:hover {
+    color: #ffffff;
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+}
+.rights ul {
+    display: flex;
+    justify-content: center;
+    color: white;
+    clear: both;
+}
+@media only screen and (min-width: 1100px) {
+    .sub-footer {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 1139px) {
+    .sub-footer .social {
+        width: 1100px;
+        display: block;
+    }
+    
+    .social h1 {
+        margin: 0px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .footer .column {
+        width: 20%;
+    }
+    
+    .footer .column h1 {
+        font-size: 14px;
+    }
+    
+    .footer .column ul li {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 745px) {
+    .footer .column {
+        width: 40%;
+    }
+    
+    .footer .column h1 {
+        font-size: 14px;
+    }
+    
+    .footer .column ul li {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .footer .column {
+        width: 40%;
+    }
+    
+    .footer .column h1 {
+        font-size: 14px;
+    }
+    
+    .footer .column ul li {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .footer .column {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 335px) {
+    .sub-footer .social {
+        display: inline-flex;
+        width: 100%;
+    }
+}
+.base {
+    margin: 0;
+    width: 100%;
+    Justify-content: center;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    list-style: none;
+    background-color: coral;
+    justify-content: contain;
+}
+.base ul {
+    width: 100%;
+    Max-width: 700px;
+    align-items: center;
+    Justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    justify-content: contain;
+}
+.base ul li {
+    text-decoration: none;
+}
+@media screen and (max-width: 900px) {
+    .base ul {
+        width: 100%;
+        margin: 0;
+        Justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+}
+
+/*FOOTER END */
+
+/* photo refe https://pixabay.com/photos/mouse-rodent-cute-mammal-nager-1708378/*/
+
+/* cockraches photo ref https://pixabay.com/vectors/bug-cockroach-insect-roach-1295181/*/
+
+/* bedbug photo ref https://pixabay.com/vectors/animal-bedbug-bed-bug-infestation-2027062/*/
+
+/* mice photo https://pixabay.com/vectors/mouse-mice-animal-rodent-small-303588/*/
