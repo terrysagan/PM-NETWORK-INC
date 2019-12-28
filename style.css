@@ -382,7 +382,7 @@ li>a:only-child:after {
     padding-top: px;
     align-items: center;
     justify-content: center;
-    background-image: url("images/bannerphoto.png");
+    background-image: url("/images/bannerphoto.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: ;
