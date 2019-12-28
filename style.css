@@ -1,4 +1,4 @@
-﻿/* CSS Document */
+/* CSS Document */
 
 
 /*kichen: https://pixabay.com/photos/kitchen-home-real-estate-2486092/*/
@@ -144,19 +144,11 @@ nav {
     }
 }
 
-
-/* Since we'll have the "ul li" "float:left"
- * we need to add a clear after the container. */
-
 nav:after {
     content: "";
     display: table;
     clear: both;
 }
-
-
-/* Removing padding, margin and "list-style" from the "ul",
- * and adding "position:reltive" */
 
 nav ul {
     float: right;
@@ -166,18 +158,12 @@ nav ul {
     position: relative;
 }
 
-
-/* Positioning the navigation items inline */
-
 nav ul li {
     margin: 0px;
     gap: 50px;
     display: inline-block;
     background-color: ;
 }
-
-
-/* Styling the links */
 
 nav a {
     display: block;
@@ -192,26 +178,15 @@ nav ul li ul li:hover {
     background-color: lightgrey;
 }
 
-
-/* Background color change on Hover */
-
 nav a:hover {
     background-color: lightgrey;
 }
 
-
-/* Hide Dropdowns by Default
- * and giving it a position of absolute */
-
 nav ul ul {
     display: none;
     position: absolute;
-    /* has to be the same number as the "line-height" of "nav a" */
     top: 60px;
 }
-
-
-/* Display Dropdowns on Hover */
 
 nav ul li:hover>ul {
     display: inherit;
@@ -230,12 +205,8 @@ nav ul ul li {
 nav ul ul ul li {
     position: relative;
     top: -60px;
-    /* has to be the same number as the "width" of "nav ul ul li" */
     left: 170px;
 }
-
-
-/* Change ' +' in order to change the Dropdown symbol */
 
 li>a:after {
     content: ' +';
@@ -252,7 +223,6 @@ li>a:only-child:after {
     max-width: 130px;
     margin: 50px auto;
     padding: 0;
-    /*mentioned font 20px+line height  60px reduced height of logo+nav*/
 }
 
 #logo img {
@@ -270,7 +240,7 @@ li>a:only-child:after {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
     margin: auto;
     align-items: center;
     text-align: center;
@@ -278,9 +248,13 @@ li>a:only-child:after {
     justify-content: space-around;
 }
 
+.menu ul {
+    width: 100%;
+    max-width: 1000px;
+}
+
 .menu li {
-    width: 120px;
-    font-size: 20px;
+    max-width: 170px;
     text-decoration: none;
     font: red;
 }
@@ -288,11 +262,11 @@ li>a:only-child:after {
 .menu li a {
     color: black;
     background: none;
+    font-size: 20px;
 }
 
 
-/* Media Queries
-/*--------------------------------------------- */
+/*Media Queries*/
 
 @media all and (max-width: 600px) {
     #logo {
@@ -399,14 +373,10 @@ li>a:only-child:after {
 
 /* SHOWCASE START*/
 
-
-/*SHOWCASE END */
-
-
-/*SHOWCASE 2 START */
-
-.title {
-    display: grid;
+.showcase {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin: auto;
     padding-top: px;
@@ -417,51 +387,78 @@ li>a:only-child:after {
     background-size: cover;
     background-attachment: ;
     background-position: center;
-    height: 80vh;
+    min-height: 65vh;
     background-repeat: no-repeat;
     text-align: center;
+    z-index: 1;
+    opacity: 0.7;
 }
 
-.textover {
-    position: relative;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-}
-
-@media all and (max-width: 1400px) {
-    .title {
-        width: 100%;
-        margin: -15px auto;
+@media (min-width: 258px) and (max-width: 1400px) {
+    .showcase {
+        margin-top: -8px;
     }
 }
 
-.title .textover img {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 600vh;
-    z-index: 0.2;
-    opacity: -80000;
-    object-fit: scale-down;
+@media all and (max-width: 352px) {
+    .showcase {
+        min-height: 75vh;
+    }
 }
 
-.button {
-    display: inline-flex;
-    float: left;
-    width: 100%;
+.textover {
+    position: absolute;
+    font-size: 25px;
+    color: blue;
+    z-index: 5;
+    opacity: 5;
+}
+
+.showcase,
+.textover h1 h2 h3 {
+    color: blue;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .textover h2 {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+    .textover h1 h2 h3 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 250px) and (max-width: 900px) {
+    .textover {
+        margin: 0 10px 0 10px;
+        font-size: 16px;
+    }
+}
+
+.button-container {
+    display: inline-block;
+    justify-content: space-between;
 }
 
 .button {
     object-fit: cover;
 }
 
+@media all and (max-width: 400px) {
+    .button-container {
+        max-width: 400px;
+        margin: 0 50px 0 50px;
+    }
+}
+
 @media all and (min-width: 900px) {
     .tags {
         flex-direction: column;
         margin: auto;
+        border: none;
     }
 }
 
@@ -471,10 +468,9 @@ li>a:only-child:after {
 
 .btn3,
 .btn4 {
-    display: inline-block;
-    max-width: 400px;
+    display: inlin-block;
     width: 100%;
-    height: 5vh;
+    height: 7vh;
     object-fit: fill;
     color: black;
     text-align: center;
@@ -483,7 +479,7 @@ li>a:only-child:after {
     align-items: center;
     justify-content: center;
     justify-self: center;
-    background-color: sandybrown;
+    background-color: ;
     border: solid 2px olivedrab;
     border-radius: 10px;
 }
@@ -498,16 +494,15 @@ li>a:only-child:after {
     color: navy;
 }
 
-.button-container {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    width: 100%;
-    justify-content: space-between;
+@media all and (max-width: 400px) {
+    .btn3,
+    .btn4 {
+        border: none;
+    }
 }
 
 
-/*SHOWCASE 2 END */
+/*SHOWCASE END */
 
 
 /* CAPTION START*/
@@ -526,11 +521,8 @@ li>a:only-child:after {
     text-align: center;
     background-color: silver;
     font-size: 20px;
-    justify-content: center;
     justify-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .caption ul {
@@ -552,7 +544,6 @@ li>a:only-child:after {
 
 /* OFFER START */
 
-
 .offer {
     display: flex;
     flex-direction: column;
@@ -565,23 +556,26 @@ li>a:only-child:after {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: ;
     margin: auto;
+    padding-left: 0;
 }
 
-.offer ul li {
+.offer ul {
     list-style: none;
-    width: 100%;
+    width: 80%;
     max-width: 1300px;
     margin: auto;
+    margin-left: 0;
 }
 
 
 /*SERIVICES/CONTENT Start*/
 
-.services {
+
+/*.services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "content1 content2 content3"
-}
+}*/
 
 .services {
     grid-area: services;
