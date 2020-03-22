@@ -28,6 +28,7 @@ body {
 header {
     background-color: #46ACC2;
     height: 10%;
+    width:100%;
     margin: 0;
     padding-top: 15px;
 }
