@@ -38,6 +38,8 @@ header {
     background-color: #46ACC2;
     font-family: sans-serif;
     color: white;
+     padding: 0 50px 0 50px;
+        width:100%;
 }
 
 .navigation-toggle {
